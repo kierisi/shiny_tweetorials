@@ -16,7 +16,7 @@ ui <- fluidPage(
       plotOutput(outputId = "penguin_scatterplot"),
       
       # datatable (ui) ----
-      DTOutput(outputId = "penguin_datatable"),
+      DTOutput(outputId = "penguin_datatable")
       
     )
   )
