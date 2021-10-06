@@ -26,7 +26,6 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   # scatterplot ----
-  
   output$penguin_scatterplot <- renderPlot({
     
     ggplot(data = penguins,
@@ -36,7 +35,6 @@ server <- function(input, output, session) {
   })
   
   # datatable (server) ----
-  
   output$penguin_datatable <- renderDT({
     
     DT::datatable(penguins)
