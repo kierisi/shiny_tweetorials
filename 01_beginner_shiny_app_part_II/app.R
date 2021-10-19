@@ -70,14 +70,16 @@ server <- function(input, output, session) {
   
   # scatterplot ----
   output$penguin_scatterplot <- renderPlot({
-    
+
     ggplot(data = filtered_penguins(),
            aes_string(x = input$x_axis, y = input$y_axis)) +
       geom_point(aes_string(color = input$scatterplot_color),
                  size = input$point_size,
                  alpha = input$point_alpha)
-    
+
   })
+  
+
   
   # datatable (server) ----
   output$penguin_datatable <- renderDT({
@@ -90,3 +92,5 @@ server <- function(input, output, session) {
 
 # run Shiny app ----
 shinyApp(ui, server)
+
+
